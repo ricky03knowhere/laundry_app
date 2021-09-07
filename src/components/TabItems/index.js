@@ -42,5 +42,6 @@ const styles = StyleSheet.create({
     color: isFocused ? PRIMARY_COLOR : DISABLED_COLOR,
     fontSize: 14,
     marginTop: 8,
+    fontFamily: 'TitilliumWeb-Regular'
   }),
 });
