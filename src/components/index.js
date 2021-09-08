@@ -1,3 +1,3 @@
+import BalanceBar from './BalanceBar';
 import BottomNavigation from './BottomNavigation';
-
-export {BottomNavigation};
+export {BalanceBar, BottomNavigation};

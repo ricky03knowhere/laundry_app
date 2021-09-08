@@ -1,6 +1,8 @@
 import React from 'react';
-import {Dimensions, Image, ImageBackground, StyleSheet, Text, View} from 'react-native';
+import {Image, ImageBackground, StyleSheet, Text, View} from 'react-native';
 import {HeaderImage, Logo} from '../../assets';
+import { BalanceBar } from '../../components';
+import {windowHeight, windowWidth} from '../../utils/consts';
 
 const Home = () => {
   return (
@@ -12,14 +14,12 @@ const Home = () => {
           <Text style={styles.username}>Mamat Basreng</Text>
         </View>
       </ImageBackground>
+      <BalanceBar />
     </View>
   );
 };
 
 export default Home;
-
-const windowHeight = Dimensions.get('window').height * 0.6;
-const windowWidth = Dimensions.get('window').width * 0.6;
 
 const styles = StyleSheet.create({
   page: {
@@ -28,11 +28,11 @@ const styles = StyleSheet.create({
   header: {
     height: windowHeight * 0.6,
     width: windowWidth * 1.7,
-    paddingHorizontal: 30,
+    paddingHorizontal: 10,
   },
   logo: {
     marginTop: 8,
-    marginLeft: -18,
+    marginLeft: -5,
     height: windowHeight * 0.13,
     width: windowWidth * 0.5,
   },
@@ -41,10 +41,10 @@ const styles = StyleSheet.create({
   },
   greeting: {
     fontSize: 24,
-    fontFamily: 'TitilliumWeb-Bold'
+    fontFamily: 'TitilliumWeb-Bold',
   },
   username: {
     fontSize: 18,
-    fontFamily: 'TitilliumWeb-Regular'
+    fontFamily: 'TitilliumWeb-Regular',
   },
 });
