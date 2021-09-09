@@ -6,6 +6,12 @@ import IconAccount from './account.svg';
 import IconAccountActive from './accountActive.svg';
 import IconAddSaldo from './addSaldo.svg';
 import IconGetPoint from './getPoint.svg';
+import IconCarpet from './carpet.svg';
+import IconIron from './iron.svg';
+import IconKilos from './kilos.svg';
+import IconUnits from './units.svg';
+import IconVIP from './vip.svg';
+import IconExpress from './express.svg';
 
 export {
   IconHome,
@@ -16,4 +22,10 @@ export {
   IconAccountActive,
   IconAddSaldo,
   IconGetPoint,
+  IconCarpet,
+  IconIron,
+  IconKilos,
+  IconUnits,
+  IconVIP,
+  IconExpress,
 };

@@ -9,18 +9,18 @@ const BalanceBar = () => {
     <View style={styles.container}>
       <View style={styles.balanceInfo}>
         <View style={styles.text}>
-          <Text style={styles.balanceLabel}>Balance  &#008;:</Text>
+          <Text style={styles.balanceLabel}>Balance  &#008;: </Text>
           <Text style={styles.balanceValue}>$12.05,-</Text>
         </View>
         <View style={styles.text}>
-          <Text style={styles.pointsLabel}>Delivery Points  :</Text>
+          <Text style={styles.pointsLabel}>Delivery Points  &#008;:</Text>
           <Text style={styles.pointsValue}>1249 Points</Text>
         </View>
       </View>
       <View style={styles.ActionBtn}>
-        <ActionBtn title="addSaldo" />
+        <ActionBtn title="Add Saldo" />
         <Gap width={10} />
-        <ActionBtn title="getPoint" />
+        <ActionBtn title="Get Point" />
       </View>
     </View>
   );
@@ -54,19 +54,20 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
   },
   balanceLabel: {
-    fontSize: 20,
+    fontSize: 22,
     fontFamily: 'TitilliumWeb-Regular',
+    paddingBottom: 19
   },
   balanceValue: {
-    fontSize: 20,
+    fontSize: 22,
     fontFamily: 'TitilliumWeb-Bold',
   },
   pointsLabel: {
-    fontSize: 12,
+    fontSize: 13,
     fontFamily: 'TitilliumWeb-Regular',
   },
   pointsValue: {
-    fontSize: 12,
+    fontSize: 13,
     fontFamily: 'TitilliumWeb-Bold',
     color: PRIMARY_COLOR,
   },

@@ -1,20 +1,35 @@
 import React from 'react';
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
-import {IconAddSaldo, IconGetPoint} from '../../assets';
+import {
+  IconAddSaldo,
+  IconGetPoint,
+  IconCarpet,
+  IconIron,
+  IconKilos,
+  IconUnits,
+  IconVIP,
+  IconExpress,
+} from '../../assets';
 import {SECONDARY_COLOR} from '../../utils/consts';
 
-const ActionBtn = ({title}) => {
+const ActionBtn = ({title, type}) => {
   const Icon = () => {
-    if (title === 'addSaldo') return <IconAddSaldo />;
-    if (title === 'getPoint') return <IconGetPoint />;
+    if (title === 'Add Saldo') return <IconAddSaldo />;
+    if (title === 'Get Point') return <IconGetPoint />;
+    if (title === 'kilos') return <IconKilos />;
+    if (title === 'units') return <IconUnits />;
+    if (title === 'iron') return <IconIron />;
+    if (title === 'vip') return <IconVIP />;
+    if (title === 'express') return <IconExpress />;
+    if (title === 'carpet') return <IconCarpet />;
     return <IconAddSaldo />;
   };
   return (
-    <TouchableOpacity>
-      <View style={styles.container}>
+    <TouchableOpacity style={styles.container(type)}>
+      <View style={styles.button(type)}>
         <Icon />
-        <Text style={styles.title}>{title}</Text>
       </View>
+      <Text style={styles.label(type)}>{title}</Text>
     </TouchableOpacity>
   );
 };
@@ -22,13 +37,20 @@ const ActionBtn = ({title}) => {
 export default ActionBtn;
 
 const styles = StyleSheet.create({
-  container: {
-    padding: 7,
+  container: type => ({
+    marginBottom: 12,
+    marginRight: type === 'service' ? 18 : 8,
+  }),
+  button: type => ({
+    padding: type === 'service' ? 12 : 7,
     borderRadius: 10,
     backgroundColor: SECONDARY_COLOR,
-  },
-  title: {
-    fontSize: 12,
-    fontFamily: 'TitilliumWeb-Regular',
-  },
+    marginBottom: 4,
+  }),
+  label: type => ({
+    fontSize: type === 'service' ? 15 : 13,
+    fontFamily:
+      type === 'service' ? 'TitilliumWeb-Light' : 'TitilliumWeb-Regular',
+    textAlign: 'center',
+  }),
 });
