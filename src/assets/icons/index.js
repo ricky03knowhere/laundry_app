@@ -12,6 +12,7 @@ import IconKilos from './kilos.svg';
 import IconUnits from './units.svg';
 import IconVIP from './vip.svg';
 import IconExpress from './express.svg';
+import IconActiveOrder from './activeOrder.svg';
 
 export {
   IconHome,
@@ -28,4 +29,5 @@ export {
   IconUnits,
   IconVIP,
   IconExpress,
+  IconActiveOrder,
 };

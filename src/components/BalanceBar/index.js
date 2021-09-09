@@ -56,7 +56,7 @@ const styles = StyleSheet.create({
   balanceLabel: {
     fontSize: 22,
     fontFamily: 'TitilliumWeb-Regular',
-    paddingBottom: 19
+    paddingBottom: 18
   },
   balanceValue: {
     fontSize: 22,

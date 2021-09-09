@@ -38,7 +38,7 @@ export default ActionBtn;
 
 const styles = StyleSheet.create({
   container: type => ({
-    marginBottom: 12,
+    marginBottom: type === 'service' ? 12: 0,
     marginRight: type === 'service' ? 18 : 8,
   }),
   button: type => ({
